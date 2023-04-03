@@ -5,31 +5,37 @@ const team = [
         role : 'Founder & CEO',
         image : 'wayne-barnett-founder-ceo.jpg'
     },
+
     {
         memberName : 'Angela Caroll',
         role : 'Chief Editor',
         image : 'angela-caroll-chiet-editor.jpg'
     },
+
     {
         memberName : 'Walter Gordon',
         role : 'Office Manager',
         image : 'walter-gordon-office-manager.jpg'
     },
+
     {
         memberName : 'Angela Lopez',
         role : 'Social Media',
         image : 'angela-lope7-social-media-manager.jpg'
     },
+
     {
         memberName : 'Angela Caroll',
         role : 'Chief Editor',
         image : 'angela-caroll-chiet-editor.jpg'
     },
+
     {
         memberName : 'Scott Estrada',
         role : 'Developer',
         image : 'scott-estrada-developer.jpg'
     },
+
     {
         memberName : 'Barbara Ramosa',
         role : 'Graphic Designer',
@@ -37,8 +43,14 @@ const team = [
     }
 ]
 
+const list = document.getElementById('memberList');
+
 // Ciclo per stampare
-for (let key in team) {
-    const member = team[key];
-    console.log(member);
+for (let i in team) {
+   const member = team[i];
+   console.log(member);
+   for (let key in member) {
+    list.innerHTML += `<li> ${key}: ${member[key]} </li>`
+   }
+   list.innerHTML += `<li> ****************** </li>`
 }
