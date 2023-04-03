@@ -50,7 +50,11 @@ for (let i in team) {
    const member = team[i];
    console.log(member);
    for (let key in member) {
-    list.innerHTML += `<li> ${key}: ${member[key]} </li>`
+    if (key === "image") {
+        list.innerHTML += `<li> <img src="assets/img/${member[key]}"> </li>`
+    } else {
+        list.innerHTML += `<li> ${key}: ${member[key]} </li>`
+    }
    }
    list.innerHTML += `<li> ****************** </li>`
 }
